@@ -62,6 +62,16 @@ paru -S otf-noto-sans-cjk ttf-maple ttf-material-design-iconic-font ttf-mononoki
 
 paru -S flameshot retroarch mangohud lutris piper dosbox goverlay easyeffects openrgb bottles gamemode lib32-gamemode minigalaxy portproton heroic-games-launcher-bin protonup-qt protonup-ng-git steam-rom-manager-bin discover-overlay gpu-screen-recorder-git replay-sorcery antimicrox qjoypad noisetorch
 
+# nvidia steam fix
+sudo pacman -Rns xf86-video-nouveau
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
+sudo pacman -Syu
+sudo reboot
+nvidia-smi
+sudo pacman -Rns steam
+sudo pacman -S steam
+
+
 paru -S ccache zram-generator dbus-broker-units rqbalance corectrl displaycal modem-manager-gui nohang ananicy-cpp uksmd libinput-gestures fancontrol-gui emote trash-cli-git downgrade gamescope
 
 
