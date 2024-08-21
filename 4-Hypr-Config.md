@@ -298,3 +298,23 @@ window#waybar {
 > code ~/.config/hypr/hyprland.conf
 
 cp from file
+
+# to set en layout on lock
+
+make script `/home/username/.local/share/bin/switch-to-us.sh`
+
+```
+#!/bin/bash
+# switch-to-us.sh
+
+# change layout
+setxkbmap us
+```
+
+> chmod +x switch-to-us.sh
+
+edit hypridle
+
+```
+on-timeout = /home/username/.local/share/bin/switch-to-us.sh && loginctl lock-session
+```
